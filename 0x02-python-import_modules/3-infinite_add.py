@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
     for i in range(1, no_of_args):
         args_sum += int(sys.argv[i])
-    print("{}".format(args_sum))
+    print("{:d}".format(args_sum))
 
 
 
