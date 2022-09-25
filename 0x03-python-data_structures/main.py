@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from no_c import no_c
+from print_reversed_list_integer import print_reversed_list_integer
 
-my_list = "Church is chilling"
+my_list = [1,2,3,4,5]
 print(my_list)
-new_list = no_c(my_list)
+new_list = print_reversed_list_integer(my_list)
 print(new_list)
