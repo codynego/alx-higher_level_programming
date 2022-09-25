@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-from print_list_integer import print_list_integer
+from no_c import no_c
 
-my_list = [1,2,3,4,5]
-print_list_integer(my_list)
+my_list = "Church is chilling"
+print(my_list)
+new_list = no_c(my_list)
+print(new_list)
