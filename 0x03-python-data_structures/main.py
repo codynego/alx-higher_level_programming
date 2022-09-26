@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-from print_reversed_list_integer import print_reversed_list_integer
-
-my_list = [1,2,3,4,5]
-print(my_list)
-print_reversed_list_integer(my_list)
+from no_c import no_c
+print(no_c("Best School"))
+print(no_c("Chicago"))
+print(no_c("C is fun!"))
