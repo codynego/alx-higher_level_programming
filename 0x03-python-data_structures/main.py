@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from no_c import no_c
-print(no_c("Best School"))
-print(no_c("Chicago"))
-print(no_c("C is fun!"))
+from max_integer import max_integer
+my_list = []
+max_value = max_integer(my_list)
+print("Max: {}".format(max_value))
