@@ -9,6 +9,6 @@ if __name__ == "__main__":
     elif int(no_of_args) > 1:
         print("{:d} arguments:".format(no_of_args))
 
-    if int(no_of_args) > 1:
+    if int(no_of_args) >= 1:
         for i in range(1, len(sys.argv)):
             print("{:d}: {:s}".format(i, sys.argv[i]))
