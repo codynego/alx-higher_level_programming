@@ -5,7 +5,7 @@ if __name__ == "__main__":
     if no_of_args == 1:
         print("{:d} argument:".format(no_of_args))
     elif no_of_args == 0:
-        print("{:d} argument.".format(no_of_args), end="")
+        print("{:d} argument.".format(no_of_args))
     elif int(no_of_args) > 1:
         print("{:d} arguments:".format(no_of_args))
 
