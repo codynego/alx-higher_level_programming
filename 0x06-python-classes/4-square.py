@@ -1,53 +1,27 @@
 #!/usr/bin/python3
-
-''' A class that defines a square '''
+"""Defines Class square"""
 
 
 class Square:
-    '''
-        Initialization of instance attributes
 
-        Args:
-        size (int): The size of the square
-    '''
+    """class Instantiation"""
     def __init__(self, size=0):
-        '''
-            initialization
-        '''
-
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
         self.__size = size
 
+    """Propesrty of  attribute size"""
     @property
     def size(self):
-        '''
-            retrieve the size of the square
-
-            Return: The size of the square
-        '''
-
         return self.__size
 
+    """Sets attribute size"""
     @size.setter
     def size(self, value):
-        '''
-            set the size of the square
-
-            Args:
-            value (int): the new square size
-        '''
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    """Public instance method- returns current area"""
     def area(self):
-        '''
-             calculate the area of the square
-             Return: The area of the square
-        '''
-        return self.__size * self.__size
+        return self.__size*self.__size
