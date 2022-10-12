@@ -37,7 +37,6 @@ class Square:
 
             Return: The size of the square
         '''
-
         return self.__size
 
     @size.setter
@@ -48,7 +47,7 @@ class Square:
             Args:
             value (int): the new square size
         '''
-        if type(value) is not int:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
