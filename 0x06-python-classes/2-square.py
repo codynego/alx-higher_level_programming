@@ -10,8 +10,6 @@ class Square:
         Args:
         size (int): The size of the square
     '''
-
-
     def __init__(self, size=0):
         ''' initialization '''
 
