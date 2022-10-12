@@ -2,7 +2,7 @@
 
 '''A class that defines a square'''
 
-class Square():
+class Square:
     '''
         An empty class
     '''
