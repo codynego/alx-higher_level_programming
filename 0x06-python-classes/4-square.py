@@ -48,5 +48,8 @@ class Square:
             Args:
             value (int): the new square size
         '''
-
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
         self.__size = value
