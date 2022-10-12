@@ -10,7 +10,11 @@ class Square:
         Args:
         size (int): The size of the square
     '''
+
+
     def __init__(self, size=0):
+        ''' initialization '''
+
         if type(size) is not int:
             raise TypeError("size must be integer")
         if size < 0:
