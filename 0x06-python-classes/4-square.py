@@ -30,7 +30,7 @@ class Square:
 
         return self.__size * self.__size
 
-    @property
+    @size.getter
     def size(self):
         '''
             retrieve the size of the square
