@@ -10,11 +10,11 @@ class Rectangle:
         """
             Initializing an instance of the class
         """
-        if not isinstance(width, int) or not isinstance(width, float):
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
-        if not isinstance(height, int) or not isinstance(height, float):
+        if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
@@ -39,7 +39,7 @@ class Rectangle:
 
             return: no return
         """
-        if not isinstance(value, int) or not isinstance(value, float):
+        if not isinstance(value, int):
             raise TypeError("value must be an integer")
         if value < 0:
             raise ValueError("value must be >= 0")
@@ -59,7 +59,7 @@ class Rectangle:
             Args:
             value (int): the new value of height
         """
-        if not isinstance(value, int) or not isinstance(value, float):
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
