@@ -10,6 +10,7 @@ class Rectangle:
         """
             Initializing an instance of the class
         """
+
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -38,8 +39,6 @@ class Rectangle:
             Setting the value of width
             Args:
             value (int): the new width
-
-            return: no return
         """
 
         if not isinstance(value, int):
@@ -60,6 +59,7 @@ class Rectangle:
     def height(self, value):
         """
             Update the value of height
+
             Args:
             value (int): the new value of height
         """
