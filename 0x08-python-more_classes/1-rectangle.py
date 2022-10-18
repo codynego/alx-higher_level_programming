@@ -14,6 +14,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
+
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
@@ -28,6 +29,7 @@ class Rectangle:
             Retriving the private attribute width
             return: the width
         """
+
         return self.__width
 
     @width.setter
@@ -39,6 +41,7 @@ class Rectangle:
 
             return: no return
         """
+
         if not isinstance(value, int):
             raise TypeError("value must be an integer")
         if value < 0:
@@ -50,6 +53,7 @@ class Rectangle:
         """
             Retrieve the value of height
         """
+
         return self.__height
 
     @height.setter
@@ -59,6 +63,7 @@ class Rectangle:
             Args:
             value (int): the new value of height
         """
+
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
