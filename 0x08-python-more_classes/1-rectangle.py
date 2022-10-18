@@ -1,10 +1,11 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 
 """ A class that defines a rectangle """
 
 
 class Rectangle:
     """ Defining a class attribute """
+
 
     def __init__(self, width=0, height=0):
         """ 
@@ -19,8 +20,9 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
 
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
+
 
     @property
     def width(self):
