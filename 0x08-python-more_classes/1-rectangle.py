@@ -6,9 +6,8 @@
 class Rectangle:
     """ Defining a class attribute """
 
-
     def __init__(self, width=0, height=0):
-        """ 
+        """
             Initializing an instance of the class
         """
         if not isinstance(width, int) or not isinstance(width, float):
@@ -22,7 +21,6 @@ class Rectangle:
 
         self.__width = width
         self.__height = height
-
 
     @property
     def width(self):
@@ -47,7 +45,6 @@ class Rectangle:
             raise ValueError("value must be >= 0")
         self.__width = value
 
-
     @property
     def height(self):
         """
@@ -66,4 +63,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = height
+        self.__height = value
