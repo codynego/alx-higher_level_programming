@@ -2,6 +2,7 @@
 
 """ A class that defines a rectangle """
 
+
 class Rectangle:
     """ Created and empty class """
 
