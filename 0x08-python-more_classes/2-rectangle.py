@@ -21,8 +21,8 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
 
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -74,7 +74,7 @@ class Rectangle:
         """
             Area of rectangle
         """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def parameter(self):
         """
@@ -83,4 +83,4 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return 0
 
-        return 2 * (self.width + self.height)
+        return (self.width + self.height) * 2
