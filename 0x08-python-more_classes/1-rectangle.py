@@ -19,8 +19,8 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
 
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -28,7 +28,7 @@ class Rectangle:
             Retriving the private attribute width
             return: the width
         """
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -43,7 +43,7 @@ class Rectangle:
             raise TypeError("value must be an integer")
         if value < 0:
             raise ValueError("value must be >= 0")
-        self._width = value
+        self.__width = value
 
 
     @property
@@ -51,7 +51,7 @@ class Rectangle:
         """
             Retrieve the value of height
         """
-        return height
+        return self.__height
 
     @height.setter
     def height(self, height):
@@ -64,4 +64,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self._height = height
+        self.__height = height
