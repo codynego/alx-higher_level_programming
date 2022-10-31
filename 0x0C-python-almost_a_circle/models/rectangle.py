@@ -123,7 +123,7 @@ class Rectangle(Base):
         Return a str representation of Rectangle
 
         """
-        return f"[Rectangle] - ({self.id}) - {self.__x}/{self.__y} - \
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
