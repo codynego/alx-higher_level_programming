@@ -30,7 +30,7 @@ class Base:
         list_dictionaries: list of dictionaries
 
         """
-        if not list_dictionaries:
+        if not list_dictionaries or list_dictionaries is None:
             return []
         else:
             json_string = json.dumps(list_dictionaries)
@@ -44,7 +44,7 @@ class Base:
         list_object: list of instances who inherits of Base
 
         """
-        if not list_objs:
+        if not list_objs or list_objs is None:
             return []
         else:
             json_list = []
@@ -66,7 +66,7 @@ class Base:
          list of dictionaries
 
         """
-        if not json_string:
+        if not json_string or json_string is None:
             return []
         else:
             json_object = json.loads(json_string)
@@ -82,14 +82,14 @@ class Base:
 
          """
         if cls.__name__ == "Rectangle":
-            tmp = cls(1,1)
-            if dictionary.get("width") == None:
+            tmp = cls(1, 1)
+            if dictionary.get("width") is None:
                 raise ValueError("Value of width not assigned")
-            if dictionary.get("height") == None:
+            if dictionary.get("height") is None:
                 raise ValueError("Value of height not assigned")
         else:
             tmp = cls(size=1)
-            if dictionary.get("size") == None:
+            if dictionary.get("size") is None:
                 raise ValueError("Value of size not assigned")
         tmp.update(**dictionary)
         return tmp
@@ -97,10 +97,13 @@ class Base:
     @classmethod
     def load_from_file(cls):
         list_inst = []
-        with open(f"{cls.__name__}.json", "r") as json_file:
-            obj_file = json_file.read()
-        dict_objs = cls.from_json_string(obj_file)
-        for i in dict_objs:
-            new_instance = cls.create(**i)
-            list_inst.append(new_instance)
+        try:
+            with open(f"{cls.__name__}.json", "r") as json_file:
+                obj_file = json_file.read()
+            dict_objs = cls.from_json_string(obj_file)
+            for i in dict_objs:
+                new_instance = cls.create(**i)
+                list_inst.append(new_instance)
+        except Exception:
+            return []
         return list_inst
