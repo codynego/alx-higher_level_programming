@@ -40,7 +40,7 @@ class Square(Rectangle):
         Return a str representation of Square
 
         """
-        return f"[Square] - ({self.id}) - {self.x}/{self.y} - \
+        return f"[Square] ({self.id}) {self.x}/{self.y} - \
 {self.__size}"
 
     def update(self, *args, **kwargs):
@@ -54,9 +54,15 @@ class Square(Rectangle):
 
         """
         if len(args) != 0:
-            self.id, self.__size, self.x, self.y = args
-            self.width = args[1]
-            self.height = args[1]
+            try:
+                self.id = args[0]
+                self.size = args[1]
+                self.width = args[1]
+                self.height = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except IndexError:
+                pass
         else:
             for key, value in kwargs.items():
                 if key == "id":
