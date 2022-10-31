@@ -136,7 +136,7 @@ class Rectangle(Base):
         args(id, width, height, x, y)
 
         """
-        if len(args) is not 0:
+        if len(args) != 0:
             self.id, self.__width, self.__height, self.__x, self.__y = args
         else:
             for key, value in kwargs.items():
