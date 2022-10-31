@@ -2,8 +2,8 @@
 
 
 from base import Base
-from rectangle import Rectangle
-from square import Square
+#from rectangle import Rectangle
+#from square import Square
 """r1 = Rectangle(2, 3, 2, 2)
 r1.display()
 
@@ -12,18 +12,17 @@ print("---")
 r2 = Rectangle(3, 2, 1, 0)
 r2.display()"""
 
-r1 = Square(5)
-print(r1)
+b1 = Base()
+print(b1.id)
 
-r1.update(10)
-print(r1)
+b2 = Base()
+print(b2.id)
 
-r1.update(1, 2)
-print(r1)
+b3 = Base()
+print(b3.id)
 
-r1.update(1, 2, 3)
-print(r1)
+b4 = Base(12)
+print(b4.id)
 
-r1.update(1, 2, 3, 4)
-print(r1)
-
+b5 = Base()
+print(b5.id)
