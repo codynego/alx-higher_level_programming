@@ -2,7 +2,7 @@
 
 
 from base import Base
-#from rectangle import Rectangle
+from rectangle import Rectangle
 #from square import Square
 """r1 = Rectangle(2, 3, 2, 2)
 r1.display()
@@ -12,17 +12,25 @@ print("---")
 r2 = Rectangle(3, 2, 1, 0)
 r2.display()"""
 
-b1 = Base()
-print(b1.id)
+try:
+    Rectangle(10, "2")
 
-b2 = Base()
-print(b2.id)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
 
-b3 = Base()
-print(b3.id)
+try:
+    r = Rectangle(10, 2)
+    r.width = -10
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
 
-b4 = Base(12)
-print(b4.id)
+try:
+    r = Rectangle(10, 2)
+    r.x = {}
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
 
-b5 = Base()
-print(b5.id)
+try:
+    Rectangle(10, 2, 3, -1)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
