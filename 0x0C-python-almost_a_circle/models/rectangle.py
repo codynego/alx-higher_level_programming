@@ -112,10 +112,10 @@ class Rectangle(Base):
         prints in stdout the Rectangle instance with the character #
 
         """
-        row = self.__width * '#'
-        for j in range(self.__y):
+        row = self.width * '#'
+        for j in range(self.y):
             print()
-        for i in range(self.__height):
+        for i in range(self.height):
             print(f"{self.__x * ' '}{row}")
 
     def __str__(self):
@@ -137,7 +137,17 @@ class Rectangle(Base):
 
         """
         if len(args) != 0:
-            self.id, self.__width, self.__height, self.__x, self.__y = args
+            """obj_attr = [self.id, self.width, self.height, "x", "y"]
+            for i in range(len(args)):
+                obj_attr[i] = args[i]"""
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
         else:
             for key, value in kwargs.items():
                 if key == "id":
