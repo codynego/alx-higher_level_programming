@@ -10,7 +10,7 @@ class Square(Rectangle):
     """
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
@@ -34,6 +34,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.__width = size
         self.__height = size
+        self.__size = size
 
     def __str__(self):
         """
@@ -41,7 +42,7 @@ class Square(Rectangle):
 
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - \
-{self.__size}"
+{self.size}"
 
     def update(self, *args, **kwargs):
         """
@@ -70,7 +71,7 @@ class Square(Rectangle):
                 if key == "size":
                     self.width = value
                     self.height = value
-                    self.__size = value
+                    self.size = value
                 if key == "x":
                     self.x = value
                 if key == "y":
