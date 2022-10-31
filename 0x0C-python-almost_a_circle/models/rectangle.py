@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ A rectangle class """
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -113,10 +113,10 @@ class Rectangle(Base):
 
         """
         row = self.__width * '#'
-        for j in range(self.__x):
+        for j in range(self.__y):
             print()
         for i in range(self.__height):
-            print(f"{self.__y * ' '}{row}")
+            print(f"{self.__x * ' '}{row}")
 
     def __str__(self):
         """
