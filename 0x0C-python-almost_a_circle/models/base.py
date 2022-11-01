@@ -41,7 +41,7 @@ class Base:
 
         """
         if not json_string:
-            return []
+            return "[]"
         else:
             json_object = json.loads(json_string)
             return json_object
@@ -54,16 +54,16 @@ class Base:
         list_object: list of instances who inherits of Base
 
         """
-        if list_objs is None:
-            return []
-        else:
-            json_list = []
-            for i in range(len(list_objs)):
-                obj_dict = cls.to_dictionary(list_objs[i])
-                json_list.append(obj_dict)
-            json_objs = cls.to_json_string(json_list)
+        json_list = []
+        for i in range(len(list_objs)):
+            obj_dict = cls.to_dictionary(list_objs[i])
+            json_list.append(obj_dict)
+        json_objs = cls.to_json_string(json_list)
 
-            with open(f"{cls.__name__}.json", "w") as json_file:
+        with open(f"{cls.__name__}.json", "w") as json_file:
+            if list_objs is None:
+                json_file.write(json_list)
+            else:
                 json_file.write(json_objs)
 
     @classmethod
