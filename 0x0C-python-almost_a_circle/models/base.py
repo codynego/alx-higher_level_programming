@@ -54,7 +54,7 @@ class Base:
         list_object: list of instances who inherits of Base
 
         """
-        list_inst = []
+        list_inst = "[]"
         for i in range(len(list_objs)):
             obj_dict = cls.to_dictionary(list_objs[i])
             json_list.append(obj_dict)
