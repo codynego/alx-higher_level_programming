@@ -25,7 +25,7 @@ class Base:
 
         """
         if list_dictionaries is None or len(list_dictionaries) is 0:
-            return []
+            return json.dumps([])
         else:
             json_string = json.dumps(list_dictionaries)
             return json_string
@@ -41,7 +41,7 @@ class Base:
 
         """
         if not json_string:
-            return []
+            return json.loads([])
         else:
             json_object = json.loads(json_string)
             return json_object
