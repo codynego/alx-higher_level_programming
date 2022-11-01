@@ -2,11 +2,14 @@
 
 from base import Base
 from rectangle import Rectangle
+from square import Square
 
-b1 = Rectangle(10, 7, 2, 8)
-dictionary = b1.to_dictionary()
-json_dictionary = Base.to_json_string([dictionary])
-print(dictionary)
-print(type(dictionary))
-print(json_dictionary)
-print(type(json_dictionary))
+s1 = Square(5)
+print(s1)
+print(s1.size)
+s1.size = 10
+print(s1)
+try:
+    s1.size("9")
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))

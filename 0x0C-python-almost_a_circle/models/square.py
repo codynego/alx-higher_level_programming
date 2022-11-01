@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ A square class """
-from models.base import Base
-from models.rectangle import Rectangle
+from base import Base
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -18,23 +18,22 @@ class Square(Rectangle):
         A getter for the private size attribute
 
         """
-        return self.__size
+        return self.width
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """
         A setter for the private width attribute
         Args:
         size (int): The new value of size
 
         """
-        if not isinstance(size, int):
+        if type(value) != "int":
             raise TypeError("width must be an integer")
-        if size <= 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
-        self.width = size
-        self.height = size
-        self.__size = size
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """
