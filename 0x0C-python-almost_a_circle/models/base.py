@@ -24,8 +24,8 @@ class Base:
         list_dictionaries: list of dictionaries
 
         """
-        if list_dictionaries is None:
-            return []
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
         else:
             json_string = json.dumps(list_dictionaries)
             return json_string
@@ -41,7 +41,7 @@ class Base:
 
         """
         if not json_string:
-            return "[]"
+            return []
         else:
             json_object = json.loads(json_string)
             return json_object
@@ -61,7 +61,7 @@ class Base:
         json_objs = cls.to_json_string(json_list)
 
         with open(f"{cls.__name__}.json", "w") as json_file:
-            if list_objs is None:
+            if list_objs is None or if not list_objs:
                 json_file.write(json_list)
             else:
                 json_file.write(json_objs)
