@@ -16,6 +16,36 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        returns the JSON string representation of list_dictionaries
+        Args:
+        list_dictionaries: list of dictionaries
+
+        """
+        if not list_dictionaries:
+            return []
+        else:
+            json_string = json.dumps(list_dictionaries)
+            return Json_string
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns the list of the JSON string representation json_string
+
+        Args:
+        json_string (dictionary):  is a string representing a
+        list of dictionaries
+
+        """
+        if not json_string:
+            return []
+        else:
+            json_object = json.loads(json_string)
+            return json_object
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
