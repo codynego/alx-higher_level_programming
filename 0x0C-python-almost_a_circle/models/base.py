@@ -59,7 +59,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """
+       """
          returns the list of the JSON string representation json_string
 
          Args:
