@@ -61,7 +61,7 @@ class Base:
 
         with open(f"{cls.__name__}.json", "w") as json_file:
             if list_objs is None:
-                json_file.write([])
+                json_file.write(list())
             else:
                 json_file.write(json_objs)
 
