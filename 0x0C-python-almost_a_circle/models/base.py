@@ -28,7 +28,7 @@ class Base:
             return []
         else:
             json_string = json.dumps(list_dictionaries)
-            return Json_string
+            return json_string
 
     @staticmethod
     def from_json_string(json_string):
