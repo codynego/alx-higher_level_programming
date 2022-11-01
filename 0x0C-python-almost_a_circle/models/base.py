@@ -55,16 +55,14 @@ class Base:
 
         """
         json_list = []
-        for i in range(len(list_objs)):
-            obj_dict = cls.to_dictionary(list_objs[i])
-            json_list.append(obj_dict)
-        json_objs = cls.to_json_string(json_list)
+        if list_objs is not None:
+            for i in range(len(list_objs)):
+                obj_dict = cls.to_dictionary(list_objs[i])
+                json_list.append(obj_dict)
+            json_objs = cls.to_json_string(json_list)
 
         with open(f"{cls.__name__}.json", "w") as json_file:
-            if list_objs is None or len(list_objs) == 0:
-                json_file.write("[]")
-            else:
-                json_file.write(json_objs)
+            json_file.write(cls.to_json_string(json_list))
 
     @classmethod
     def create(cls, **dictionary):
