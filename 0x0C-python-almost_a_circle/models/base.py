@@ -24,7 +24,7 @@ class Base:
         list_dictionaries: list of dictionaries
 
         """
-        if not list_dictionaries:
+        if list_dictionaries is None or len(list_dictionaries) is 0:
             return []
         else:
             json_string = json.dumps(list_dictionaries)
