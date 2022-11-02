@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ A square class """
-from base import Base
-from rectangle import Rectangle
+from models.base import Base
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -28,7 +28,7 @@ class Square(Rectangle):
         size (int): The new value of size
 
         """
-        if type(value) != "int":
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
