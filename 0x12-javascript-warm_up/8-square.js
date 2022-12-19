@@ -1,13 +1,14 @@
 #!/usr/bin/node
+let num = process.argv[2];
 
-const args = process.argv.slice(2);
-let square = Number(args[0]);
-
-if (isNaN(Number(args[0]))) {
+if (isNaN(num)) {
   console.log('Missing size');
 } else {
-  while (square > 0) {
-    console.log('x'.repeat(Number(args[0])));
-    square--;
+  for (let i = 0; i < num; i++) {
+    let msg = '';
+    for (let j = 0; j < num; j++) {
+      msg = msg + 'X';
+    }
+    console.log(msg);
   }
 }

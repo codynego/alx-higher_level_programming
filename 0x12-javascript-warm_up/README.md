@@ -1,1 +1,1 @@
-0x12. JavaScript - Warm up
+Warming up for JavaScript projects
